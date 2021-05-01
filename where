@@ -1,0 +1,6 @@
+if [ $3 = "-c" ]; then
+   find . -type f -iname "*$2*" -exec grep --with-filename -in -A4 -B4 "$1" {} ';'
+else
+   find . -type f -iname "*$2*" -exec grep --with-filename -in "$1" {} ';'
+fi
+
