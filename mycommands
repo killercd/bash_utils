@@ -1,0 +1,1 @@
+ls -l ~/.local/bin/ | awk '{print $9}' | sed 1d
