@@ -1,0 +1,1 @@
+history | tail -n2 | head -n1 | awk '{ for(i=2; i<=NF; ++i) printf $i""FS; print "" }' > $1 && chmod +x $1
