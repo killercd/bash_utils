@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $1 = "--help" ]; then
+    echo save last n commands to file
+    echo usage: savelast 10 script.sh
+    exit 0
+fi
+
+N=$1
+filename=$2
+
+tail $HOME/.bash_history -n $N > /tmp/hsout
+echo "#!/bin/bash" > $filename
+cat /tmp/hsout >> $filename
+rm /tmp/hsout
+chmod +x "$filename"
+

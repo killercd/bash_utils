@@ -1,1 +1,2 @@
-# bash_utils
+# A collection of useful scripts
+
